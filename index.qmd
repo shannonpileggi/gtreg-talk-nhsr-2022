@@ -1,0 +1,34 @@
+---
+title: "Introducing {gtreg}: an R package to produce regulatory tables for clinical research"
+author: "Shannon Pileggi & Daniel Sjoberg"
+footer:  "[Introducing {gtreg}](https://shannonpileggi.github.io/gtreg-talk-nhsr-2022/)"
+logo: "images/gtreg-logo.png"
+editor: source
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    chalkboard: true
+execute:
+  echo: true
+  output: asis
+  freeze: auto
+cache: true
+---
+
+{{< include slides/00-setup.qmd >}}
+
+{{< include slides/01-overview.qmd >}}
+
+{{< include slides/02-first-ae-table.qmd >}}
+
+{{< include slides/03-modify-tables.qmd >}}
+
+{{< include slides/04-other-tables.qmd >}}
+
+{{< include slides/05-table-shells.qmd >}}
+
+{{< include slides/06-export.qmd >}}
+
+{{< include slides/07-thank-you.qmd >}}
