@@ -102,7 +102,6 @@ View(df_patient_characteristics)
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "2,3"
 df_adverse_events |> 
   tbl_ae(
     id = patient_id,

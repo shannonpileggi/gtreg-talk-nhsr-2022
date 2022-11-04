@@ -379,8 +379,6 @@
       margin-right: 0; 
     }
   </style>
-  <link href="index_files/libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="index_files/libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -1522,8 +1520,8 @@ NA
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Table</a></li><li><a href="#tabset-2-3">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-11_22cdd02f24d68b901076ed281829a5b4">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2,3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df_adverse_events <span class="sc">|&gt;</span> </span>
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-11_04e6ad214da26dce84b6b56b3c4d10ce">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df_adverse_events <span class="sc">|&gt;</span> </span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">tbl_ae</span>(</span>
 <span id="cb3-3"><a href="#cb3-3"></a>    <span class="at">id =</span> patient_id,</span>
 <span id="cb3-4"><a href="#cb3-4"></a>    <span class="at">ae =</span> adverse_event,</span>
@@ -3764,14 +3762,9 @@ Drug B
 </div>
 </div>
 </section>
-<section id="modifying-headers" class="slide level2">
-<h2>Modifying headers</h2>
-<p><a href="https://shannonpileggi.github.io/gtreg/articles/table-modifications.html" class="uri">https://shannonpileggi.github.io/gtreg/articles/table-modifications.html</a></p>
-<p>Use <code>modify_header()</code> and <code>modify_spanning_header()</code> with <code>all_</code> column selectors.</p>
-
-<img data-src="images/gtreg-modify.gif" class="r-stretch"></section>
 <section id="tbl_ae-with-modified-headers" class="slide level2">
 <h2>tbl_ae() with modified headers</h2>
+<p><a href="https://shannonpileggi.github.io/gtreg/articles/table-modifications.html" class="uri">https://shannonpileggi.github.io/gtreg/articles/table-modifications.html</a></p>
 <div class="panel-tabset">
 <ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Code</a></li><li><a href="#tabset-6-2">Table</a></li><li><a href="#tabset-6-3">Data</a></li></ul>
 <div class="tab-content">
@@ -4506,17 +4499,17 @@ Drug B
 <ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Code</a></li><li><a href="#tabset-7-2">Table</a></li><li><a href="#tabset-7-3">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-30_8bc9523a50061d82228d0728c7234474">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-30_808f218ede89e23d3b17ad273af6b36a">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a> df_patient_characteristics <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">tbl_reg_summary</span>(</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="at">by =</span> trt, </span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="at">include =</span> <span class="fu">c</span>(marker, status)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">select</span>(trt, marker, status) <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">tbl_reg_summary</span>(</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="at">by =</span> trt</span>
 <span id="cb8-5"><a href="#cb8-5"></a>    ) <span class="sc">|&gt;</span> </span>
 <span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">bold_labels</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-7-2">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-31_b338dd17f12efe2ebe46bff0b7ea30d3">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-31_10a37ae59417fc52bdf9e05af7e75c34">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -4784,20 +4777,6 @@ Physician Decision
 </div>
 </div>
 </section>
-<section id="exercise-3" class="slide level2">
-<h2>Exercise 3</h2>
-<p><br></p>
-<p><strong>Recommended:</strong> Enter the dedicated RStudio Cloud work space (with packages pre-installed) to complete Exercise 1. It may still be helpful to peek at the <a href="https://shannonpileggi.github.io/gtreg-workshop-rinpharma-2022/exercises.html" target="_blank">exercises web page</a> to verify that your tables match the desired output.</p>
-<p><a href="https://rstudio.cloud/spaces/299322/join?access_code=Vnp96stsVIDLiEJI7AtHAQ4GB1gsptQgnOGb99_N" target="_blank">Click here to enter R in Pharma RStudio Cloud work space for {gtreg}</a></p>
-<p><br></p>
-<p><strong>Otherwise:</strong> Use your personal computer and follow along the <a href="https://shannonpileggi.github.io/gtreg-workshop-rinpharma-2022/exercises.html" target="_blank">exercises on the website</a>. Challenge yourself not to peek at the code solutions until you have completed the exercise.</p>
-<div class="cell-output-display">
-<div class="countdown" id="timer_ca4591d7" data-update-every="1" tabindex="0" style="right:0;bottom:0;font-size:1.5em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</section>
 <section id="tbl_listing" class="slide level2">
 <h2>tbl_listing()</h2>
 <p>A fancy 💅 way to print grouped data.</p>
@@ -4805,7 +4784,7 @@ Physician Decision
 <ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Code</a></li><li><a href="#tabset-8-2">Table</a></li><li><a href="#tabset-8-3">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-8-1">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-34_2b9e8bfe3f1484166d399387a06fb1d8">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-33_0f7af7a6ae81ecff0d2a3d4cf72920a2">
 <div class="sourceCode cell-code" id="cb9" data-code-line-numbers="5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>df_adverse_events <span class="sc">|&gt;</span> </span>
 <span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">select</span>(system_organ_class, adverse_event, grade, drug_attribution, patient_id) <span class="sc">|&gt;</span> </span>
@@ -4817,7 +4796,7 @@ Physician Decision
 </div>
 </div>
 <div id="tabset-8-2">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-35_14af6a2e52f8e67db7dccb90923b0f55">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-34_025fa08aa332d27e0f0f7f617f744bd6">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -5006,7 +4985,7 @@ ID 1
 </div>
 <div id="tabset-8-3">
 <p><code>df_adverse_events</code></p>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-36_dbd7cda3d580440e9381dd30881e96ed">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-35_7819076a81e2a9bc4dcb1a3b7d3bc0db">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -5207,17 +5186,17 @@ ID 1
 </div>
 </div>
 </section>
-<section id="tbl_listing-extensions" class="slide level2">
-<h2>tbl_listing() extensions</h2>
+<section id="tbl-extensions" class="slide level2">
+<h2>tbl extensions</h2>
 <p>Remember this table?</p>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-37_78fa3848ed7d10f18d89982f06d538cc">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-36_2a5d774583a4ab3e68e29f9c0721c31a">
 
 </div>
 <div class="panel-tabset">
 <ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Table</a></li><li><a href="#tabset-9-2">Code</a></li><li><a href="#tabset-9-3">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-9-1">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-38_028c78eac9b3f72defb2c01683a573c4">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-37_b3876e92dea07d83fd7147c7777865d9">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -5346,7 +5325,7 @@ Thrombocytopenia
 </div>
 </div>
 <div id="tabset-9-2">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-39_53c98d216785bce62bc133cbf0b9f3e6">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-38_8cdd93d0e22736118f4806c895988337">
 <div class="sourceCode cell-code" id="cb10" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>dat <span class="sc">|&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">tbl_listing</span>(</span>
 <span id="cb10-3"><a href="#cb10-3"></a>    <span class="at">group_by =</span> ae_label</span>
@@ -5362,7 +5341,7 @@ Thrombocytopenia
 </div>
 </div>
 <div id="tabset-9-3">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-40_ec430c666cf351c805f8fc7335b4c9d3">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-39_b93936542a90625209b5cd3a6c6aec44">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -5497,7 +5476,7 @@ Term 3
 <li><p>Overwrite the statistic(s) shown to a fixed character string by implementing the <code>style_xxx()</code> function in the <code>digits</code> argument.</p></li>
 </ol>
 <div class="fragment">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-41_12bbfc55e50099b660a4a6e79442f3e9">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-40_4c433b038de0d511fdfa447a408acbe8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">style_xxx</span>(<span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>[1] “xx” “xx” “xx” “xx”</p>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">style_xxx</span>(<span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>, <span class="at">width =</span> <span class="dv">4</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -5529,7 +5508,7 @@ Term 3
 </div>
 </div>
 <div id="tabset-10-2">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-43_3b87660395920b7e94fc16c13ca845ef">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-42_f8e7411fc284e95cc9484d52b2c5fd2b">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -5972,7 +5951,7 @@ xx (xx)
 <div class="columns">
 <div class="column" style="width:65%;">
 <p><code>df_adverse_events</code></p>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-44_1fae32cc4755383b31cb4881091db293">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-43_05e51971a96381c7bbf1126d1c455226">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -6086,7 +6065,7 @@ Blood and lymphatic system disorders
 </div>
 </div><div class="column" style="width:35%;">
 <p><code>df_patient_characteristics</code></p>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-45_59a17009f3e45735004c05da06ca4d4f">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-44_11cc049e5d1a1257e308d6fd7cf32c5a">
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
 <thead style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -6168,7 +6147,7 @@ Drug B
 <div id="tabset-11-1">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-46_4127fd03cd3d52b41d5a12a87b51a239">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-45_0004e55190863d55fc3467e4b683cba2">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>table1 <span class="ot">&lt;-</span> df_adverse_events <span class="sc">|&gt;</span> </span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">tbl_ae</span>(</span>
 <span id="cb14-3"><a href="#cb14-3"></a>    <span class="at">id =</span> patient_id,</span>
@@ -6183,7 +6162,7 @@ Drug B
 <span id="cb14-12"><a href="#cb14-12"></a>  <span class="fu">bold_labels</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-47_997a9e2ba2c4a48e29eb296d28a74ece">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-46_63310f9aa632377332b2eaca6abc0442">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>table1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <table style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif; display: table; border-collapse: collapse; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;">
@@ -6445,7 +6424,7 @@ Gastrointestinal disorders
 <div id="tabset-11-2">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-48_4a2110ff38cb93a57e5905af0884a7cc">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-47_b6a373fb43760775a91966a7a0a89bbc">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>table1 <span class="sc">|&gt;</span>  </span>
 <span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">as_flex_table</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb16-3"><a href="#cb16-3"></a>  flextable<span class="sc">::</span><span class="fu">save_as_docx</span>(</span>
@@ -6460,7 +6439,7 @@ Gastrointestinal disorders
 <div id="tabset-11-3">
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-49_cd890b52c7b80dd8b156301d7d394a29">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-48_798bf45ded2bf32a5e8232ede14ef1b7">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>table1 <span class="sc">|&gt;</span>  </span>
 <span id="cb17-2"><a href="#cb17-2"></a> <span class="fu">as_hux_xlsx</span>(</span>
 <span id="cb17-3"><a href="#cb17-3"></a>   <span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"ae_table.xlsx"</span>)</span>
@@ -6503,7 +6482,7 @@ Gastrointestinal disorders
 <p><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM272 416h-160C103.2 416 96 408.8 96 400C96 391.2 103.2 384 112 384h160c8.836 0 16 7.162 16 16C288 408.8 280.8 416 272 416zM272 352h-160C103.2 352 96 344.8 96 336C96 327.2 103.2 320 112 320h160c8.836 0 16 7.162 16 16C288 344.8 280.8 352 272 352zM288 272C288 280.8 280.8 288 272 288h-160C103.2 288 96 280.8 96 272C96 263.2 103.2 256 112 256h160C280.8 256 288 263.2 288 272z"></path></svg> {gtreg} website</p>
 <p>&nbsp; &nbsp; <a href="https://shannonpileggi.github.io/gtreg/" class="uri">https://shannonpileggi.github.io/gtreg/</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"></path></svg> {gtreg} installation</p>
-<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-51_788a1aa17a3b3cac30f4b102710a5bc2">
+<div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-50_65fb124e883be5910ea04869a8dd4eae">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># install from CRAN</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="fu">install.packages</span>(<span class="st">"gtreg"</span>) </span>
 <span id="cb19-3"><a href="#cb19-3"></a><span class="co"># or install development version from github</span></span>

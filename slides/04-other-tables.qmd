@@ -15,9 +15,9 @@ Create summary tables with standard regulatory formatting.
 #| echo: true
 #| eval: false
  df_patient_characteristics |> 
+  select(trt, marker, status) |> 
   tbl_reg_summary(
-    by = trt, 
-    include = c(marker, status)
+    by = trt
     ) |> 
   bold_labels()
 ```
@@ -28,10 +28,10 @@ Create summary tables with standard regulatory formatting.
 #| echo: false
 #| eval: true
  df_patient_characteristics |> 
+  select(trt, marker, status) |> 
   tbl_reg_summary(
-    by = trt, 
-    include = c(marker, status)
-    )|> 
+    by = trt
+    ) |> 
   bold_labels()
 ```
 
@@ -101,7 +101,7 @@ df_adverse_events |>
 
 :::
 
-## tbl_listing() extensions
+## tbl extensions
 
 Remember this table?
 

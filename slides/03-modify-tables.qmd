@@ -69,17 +69,11 @@ df_patient_characteristics |>
 :::
 :::
 
-## Modifying headers
-
-<https://shannonpileggi.github.io/gtreg/articles/table-modifications.html>
-
-Use `modify_header()` and `modify_spanning_header()` with `all_` column selectors.
-
-
-![](images/gtreg-modify.gif)
 
 
 ## tbl_ae() with modified headers
+
+<https://shannonpileggi.github.io/gtreg/articles/table-modifications.html>
 
 ::: panel-tabset
 
